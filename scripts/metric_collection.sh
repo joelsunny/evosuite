@@ -26,18 +26,18 @@ elif [ $1 == "Mockito"]; then
  base_dir="/tmp/sources/$1/$2/src"
 elif [ $1 == "Time"]; then 
  base_dir="/tmp/sources/$1/$2/src"
-
+fi
 
 echo "INFO: project source = $base_dir"
 # metric collection
 
 echo "INFO: collecting metric for project $1 version $2"
-echo "$OSA -projectName=$1 -projectBaseDir=$2 -resultsDir=MetResults -runMetricHunter=false -runDCF=false -runFB=false -runPMD=false"
+echo "$OSA -projectName=$1 -projectBaseDir=$base_dir -resultsDir=/tmp/MetResults -currentDate=$2 -runMetricHunter=false -runDCF=false -runFB=false -runPMD=false"
 $OSA -projectName=$1 -projectBaseDir=$base_dir -resultsDir=/tmp/MetResults -currentDate=$2 -runMetricHunter=false -runDCF=false -runFB=false -runPMD=false
 
 # metric filtering
 rm -f ./Metrics.csv 
 csv_file="/tmp/MetResults/$1/java/$2/$1-Method.csv"
-python metric_filtering.py $csv_file $METRIC
+python3 metric_filtering.py $csv_file $METRIC
 
 mv ./Metrics.csv ../client/src/main/java/org/evosuite/coverage/aes/method/Metrics.csv

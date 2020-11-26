@@ -172,7 +172,7 @@ public class FitnessFunctions {
 		case VCMDDU2:
 			return new AESBranchCoverageSuiteFitness(Metric.VCMDDU2);
 		case VCMDDU2_METHOD:
-			return new AESMethodCoverageSuiteFitness(Metric.VCMDDU2);
+			return new AESMethodCoverageSuiteFitness(Metric.VCMDDU2_METHOD);
 		case VRDDU:
 			return new AESBranchCoverageSuiteFitness(Metric.VRDDU);
 		case DDU_METHOD:
