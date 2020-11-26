@@ -36,5 +36,8 @@ echo "$OSA -projectName=$1 -projectBaseDir=$2 -resultsDir=MetResults -runMetricH
 $OSA -projectName=$1 -projectBaseDir=$base_dir -resultsDir=/tmp/MetResults -currentDate=$2 -runMetricHunter=false -runDCF=false -runFB=false -runPMD=false
 
 # metric filtering
+rm -f ./Metrics.csv 
 csv_file="/tmp/MetResults/$1/java/$2/$1-Method.csv"
 python metric_filtering.py $csv_file $METRIC
+
+mv ./Metrics.csv ../client/src/main/java/org/evosuite/coverage/aes/method/Metrics.csv
