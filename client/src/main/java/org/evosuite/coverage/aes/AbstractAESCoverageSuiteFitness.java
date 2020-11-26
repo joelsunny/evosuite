@@ -18,7 +18,7 @@ public abstract class AbstractAESCoverageSuiteFitness extends TestSuiteFitnessFu
 	private static long iteration = 0;
     final double THRESHOLD = 0.000001;
 
-	public static enum Metric { AES, DTR, VDDU,VMDDU,VRDDU,VCDDU,VCMDDU1,VCMDDU2};		//New enum added 1
+	public static enum Metric { AES, DTR, VDDU,VMDDU,VRDDU,VCDDU,VCMDDU1,VCMDDU2, VCMDDU2_METHOD};		//New enum added 1
 	private Metric metric;
 
 	public AbstractAESCoverageSuiteFitness(Metric metric) {
