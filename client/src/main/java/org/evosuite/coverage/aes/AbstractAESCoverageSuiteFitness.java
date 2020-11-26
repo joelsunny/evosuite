@@ -390,6 +390,11 @@ public abstract class AbstractAESCoverageSuiteFitness extends TestSuiteFitnessFu
             return  (0.5d - (0.5d * ff_val));
         }
 
+        case VCMDDU2_METHOD: {
+            double ff_val = number_of_1s_metric(spectrum,null);
+            return  (0.5d - (0.5d * ff_val));
+        }
+
 		case VRDDU: {
             return 0.5d * spectrum.basicCoverage();
         }

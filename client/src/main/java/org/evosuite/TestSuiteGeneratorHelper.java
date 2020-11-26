@@ -128,6 +128,9 @@ public class TestSuiteGeneratorHelper {
       case VCMDDU2:
         LoggingUtils.getEvoLogger().info("  - VCMDDU2 Method Coverage");
         break;
+      case VCMDDU2_METHOD:
+        LoggingUtils.getEvoLogger().info("  - VCMDDU2 Method Coverage Prior Weighted");
+        break;
       case VRDDU:
         LoggingUtils.getEvoLogger().info("  - VRDDU Method Coverage");
         break;

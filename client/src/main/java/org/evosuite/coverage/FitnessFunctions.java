@@ -171,6 +171,8 @@ public class FitnessFunctions {
 			return new AESBranchCoverageSuiteFitness(Metric.VCMDDU1);
 		case VCMDDU2:
 			return new AESBranchCoverageSuiteFitness(Metric.VCMDDU2);
+		case VCMDDU2_METHOD:
+			return new AESMethodCoverageSuiteFitness(Metric.VCMDDU2);
 		case VRDDU:
 			return new AESBranchCoverageSuiteFitness(Metric.VRDDU);
 		case DDU_METHOD:
@@ -256,6 +258,8 @@ public class FitnessFunctions {
 		case DDU_PUBLIC_METHOD:
 		case DDU_PUBLIC_METHOD_DTR:
 			return new AESMethodCoverageFactory(true);
+		case VCMDDU2_METHOD: 
+			return new AESMethodCoverageFactory();
 		case VCMDDU1:
 		case VCMDDU2:
 		case DDU_BRANCH:
@@ -332,6 +336,7 @@ public class FitnessFunctions {
 		case VCDDU:
 		case VCMDDU1:
 		case VCMDDU2:
+		case VCMDDU2_METHOD:
 		case VRDDU:
 		case DDU_METHOD:
 		case DDU_METHOD_DTR:

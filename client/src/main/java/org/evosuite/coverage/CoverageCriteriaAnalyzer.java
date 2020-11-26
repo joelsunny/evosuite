@@ -187,6 +187,7 @@ public class CoverageCriteriaAnalyzer {
             case VCDDU:
             case VCMDDU1:
             case VCMDDU2:
+            case VCMDDU2_METHOD:
             case VRDDU:
                 return RuntimeVariable.VDDUCoverage;
             case DDU_METHOD:
