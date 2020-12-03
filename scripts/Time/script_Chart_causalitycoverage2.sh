@@ -5,8 +5,8 @@ j=2
 projectname="Time"
 # basefolder="/home/ubuntu/abhijitc/evo_chart_causalitycoverage2"
 # d4j_home="/home/ubuntu/abhijitc"
-basefolder="/data/joel/ulysis/exps/${projectname}_exps_ground_2"
-d4j_home="/data/joel/ulysis"
+basefolder="/home/ubuntu/joel/ulysis/exps/${projectname}_exps_ground_2"
+d4j_home="/home/ubuntu/joel/ulysis"
 
 
 mkdir -p "$basefolder"
