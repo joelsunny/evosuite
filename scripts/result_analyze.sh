@@ -23,7 +23,7 @@ for i in $(seq 1 $bugno);
 do
     bugid="$i"
     echo "INFO: checking bug $bugid"
-    matrixfile=$basepath/bug"$bugid"/$iteration/fl/fault_localization_log/Chart/evosuite-VCMDDU2/"$bugid"b."$bugid".sfl/txt/matrix.txt
+    matrixfile=$basepath/bug"$bugid"/$iteration/fl/fault_localization_log/$projectname/evosuite-VCMDDU2/"$bugid"b."$bugid".sfl/txt/matrix.txt
     if [ ! -f $matrixfile ]; then
         echo "ERR: no data found for bug $bugid"
         continue
@@ -36,6 +36,6 @@ do
     fi
 
     faultcsv="$basepath/bug"$bugid"/$iteration/fl/fault_localization"
-    python3 analyze.py $faultcsv
+    python3 analyze.py $faultcsv $projectname $bugid
 
 done
